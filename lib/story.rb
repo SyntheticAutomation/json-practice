@@ -5,7 +5,7 @@ class Story
 
   attr_reader :section, :subsection, :title, :abstract, :url, :published_date, :photo
 
-  def initialize(story_index, file_path)
+  def initialize(story_index)
     file = File.read('data/nytimes.json')
     data_hash = JSON.parse(file)
     list_of_stories = data_hash["results"]

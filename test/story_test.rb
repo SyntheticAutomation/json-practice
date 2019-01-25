@@ -7,12 +7,12 @@ require './lib/story'
 
 class StoryTest < Minitest::Test
   def test_it_exists
-    story = Story.new(0, 'data/nytimes.json')
+    story = Story.new(0)
     assert_instance_of Story, story
   end
 
   def test_it_has_attributes
-    story = Story.new(0, 'data/nytimes.json')
+    story = Story.new(0)
     assert_equal "U.S.", story.section
     assert_equal "Politics", story.subsection
     assert_equal "How a Lawyer, a Felon and a Russian General Chased a Moscow Trump Tower Deal", story.title
